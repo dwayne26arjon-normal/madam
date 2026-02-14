@@ -5,7 +5,7 @@ window.onload = () => {
 const wrapper = document.querySelector(".wrapper");
 const openBtn = document.getElementById("openBtn");
 const closeBtn = document.getElementById("closeBtn");
-const music = document.getElementById('valentineMusic');
+const music = document.getElementById("valentineMusic");
 
 if (openBtn) {
   openBtn.addEventListener("click", () => {
@@ -13,10 +13,10 @@ if (openBtn) {
     openBtn.style.display = "none";
     closeBtn.style.display = "inline-block";
 
-    // Play music when "Open" is clicked
+    // This starts the music when she clicks 'Open'
     if (music) {
-      music.play().catch((error) => {
-        console.log("Music play blocked by browser:", error);
+      music.play().catch(error => {
+        console.log("Playback blocked:", error);
       });
     }
   });
@@ -27,7 +27,5 @@ if (closeBtn) {
     wrapper.classList.remove("open");
     closeBtn.style.display = "none";
     openBtn.style.display = "inline-block";
-    
-    // Optional: music.pause(); // Uncomment if you want music to stop when closed
   });
 }
